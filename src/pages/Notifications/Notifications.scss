@@ -1,0 +1,278 @@
+@import "../../assets/css/variable.scss";
+@import "../../assets/css/mixin.scss";
+.notification {
+    .nav-tabs {
+        padding: 0 20px;
+        @include for-size(tabletLarge-view) {
+            padding: 0 2px;
+        }
+    }
+    .tab-content {
+        padding: 29px 20px;
+        @include for-size(laptop-view-new) {
+            padding: 0;
+        }
+    }
+    .notification-tab-heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+
+        h6 {
+            @include fontsize(18px);
+            font-weight: 700;
+            @include for-size(tabletLarge-view) {
+                display: none;
+            }
+        }
+        .btn-notification {
+            text-decoration: underline;
+            @include fontsize(12px);
+            font-weight: 600;
+            color: #9f9f9f;
+            border: none;
+            background: transparent;
+            .active {
+                color: #540be0;
+            }
+        }
+    }
+}
+.notification-wrap {
+    margin-bottom: 15px;
+    .main-card {
+        @include for-size(laptop-view-new) {
+            padding: 23px !important;
+        }
+    }
+    .notification-search {
+        padding: 23px 19px 0;
+        @include for-size(tabletLarge-view) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0;
+            margin-bottom: 18px;
+        }
+        @include for-size(laptop-view-new) {
+            margin-bottom: 31px;
+        }
+        .btn-one {
+            width: 195px;
+        }
+        .search-block {
+            .Search-icon {
+                right: 1px;
+            }
+        }
+    }
+    .nav-link {
+        color: $text-color;
+        font-weight: 600;
+        padding: 7px 0;
+        border: none;
+        @include for-size(tabletLarge-view) {
+            padding: 7px 0 5px;
+        }
+    }
+
+    .nav-tabs {
+        gap: 40px;
+        @include for-size(tabletLarge-view) {
+            gap: 32px;
+        }
+        .nav-link.active {
+            border: none;
+            color: $main-secondary;
+            position: relative;
+            background-color: transparent;
+
+            &::after {
+                content: " ";
+                width: 100%;
+                height: 0.1rem;
+                background-color: $main-secondary;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                z-index: 11;
+            }
+        }
+    }
+    .nav-item .nav-link {
+        @include fontsize(14px);
+        @include for-size(tabletLarge-view) {
+            @include fontsize(16px);
+        }
+    }
+    .details-wrap {
+        @include for-size(tabletLarge-view) {
+            gap: 0;
+        }
+        &.unread-news {
+            .news-block {
+                h3,
+                p {
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+    .news-notification {
+        padding: 20px 0 23px;
+        border-bottom: 2px solid $border-color;
+        @include for-size(laptop-view-new) {
+            padding: 25px 0 23px;
+        }
+    }
+    .news-block {
+        @include for-size(tabletLarge-view) {
+            padding-right: 12px;
+        }
+        @include for-size(laptop-view-new) {
+            padding-right: 29px;
+        }
+    }
+    .notification-panel {
+        @include for-size(tabletLarge-view) {
+            flex-direction: row-reverse;
+        }
+        h3 {
+            @include fontsize(16px);
+            color: $text-black;
+            margin-bottom: 2px;
+            font-weight: 400;
+
+            @include for-size(tabletLarge-view) {
+                padding-right: 22px;
+                @include fontsize(18px);
+            }
+            @include for-size(laptop-view-new) {
+                margin-bottom: 12px;
+            }
+        }
+        p {
+            font-weight: 400;
+            @include fontsize(12px);
+            color: $text-color;
+            letter-spacing: -0.2px;
+            margin-bottom: 0;
+            line-height: 15.2px;
+            @include for-size(tabletLarge-view) {
+                @include fontsize(16px);
+            }
+            @include for-size(laptop-view-new) {
+                line-height: 1.1;
+            }
+        }
+    }
+
+    .tag-wrap {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        @include for-size(tabletLarge-view) {
+            flex-direction: row-reverse;
+            padding-left: 30px;
+            gap: 6px;
+        }
+        @include for-size(laptop-view-new) {
+            padding-left: 43px;
+        }
+        .tag {
+            display: block;
+            text-transform: uppercase;
+            color: $white;
+            background-color: $text-black;
+            padding: 2px 3px;
+            border-radius: 4px;
+            font-weight: 600;
+            //ADD FONT FAMILY; source sans pro
+            @include fontsize(10px);
+            @include for-size(tabletLarge-view) {
+                @include fontsize(12px);
+                padding: 5px 6px;
+            }
+        }
+    }
+    .date {
+        @include fontsize(14px);
+        white-space: nowrap;
+        display: block;
+        color: $text-color;
+        @include for-size(tabletLarge-view) {
+            @include fontsize(16px);
+        }
+    }
+    .news-icon-wrap {
+        padding: 4px 4px;
+        width: 40px;
+        height: 40px;
+        background-color: $input-bg;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .news-icon {
+            background: url("../../assets/images/notification.svg") no-repeat;
+            display: block;
+            background-size: 100%;
+            width: 20px;
+            height: 26px;
+        }
+        @include for-size(tabletLarge-view) {
+            width: 54px;
+            height: 54px;
+        }
+    }
+    .tab-wrap {
+        min-height: 500px;
+    }
+    .unread-tab {
+        min-height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .unread-text {
+            @include fontsize(20px);
+            font-weight: 600;
+        }
+    }
+    .unread-img {
+        position: relative;
+        max-width: 320px;
+        width: 100%;
+        margin-bottom: 20px;
+        .img-wrap {
+            width: 200px;
+            margin-left: 50px;
+        }
+        img {
+            width: 100%;
+        }
+
+        &::after {
+            content: " ";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 60px;
+            background-color: $input-bg;
+            border-radius: 200px;
+            z-index: -1;
+        }
+    }
+}
+.news-notification {
+    .col-sm-11 {
+        padding-left: 0 !important;
+        @include for-size(tabletLarge-view) {
+            padding-left: initial;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+@import '../../assets/css/variable.scss';
+@import '../../assets/css/mixin.scss';
+.add-depandent-btn{
+    @include fontsize(12px);
+    font-weight: 600;
+    margin-top: 3px;
+    text-decoration: underline;
+    border: none;
+    background: transparent;
+    color: #540BE0;
+i{
+    display: none;
+}
+}

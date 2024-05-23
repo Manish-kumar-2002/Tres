@@ -1,0 +1,417 @@
+@import "../../assets/css/variable.scss";
+@import "../../assets/css/mixin.scss";
+
+.sub-benefits-wrap {
+    @include for-size(tabletLarge-view) {
+        display: flex;
+        padding: 20px 25px;
+    }
+    @include for-size(laptop-view-new) {
+        padding: 21px 23px;
+    }
+}
+
+.benefits-wrap {
+    margin-bottom: 16px;
+    @include for-size(tabletLarge-view) {
+        border: 1px solid $border-color;
+        border-radius: 10px;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+    h2 {
+        color: $text-black;
+        margin-bottom: 16px;
+        font-weight: 700;
+
+        @include for-size(tabletLarge-view) {
+            font-weight: 600;
+            padding: 20px 25px;
+            background-color: rgba(249, 247, 254, 1);
+            border-radius: 10px 10px 0px 0px;
+            margin: 0;
+        }
+        &.network-head {
+            @include for-size(tabletLarge-view) {
+                background-color: $top-bg;
+            }
+        }
+    }
+}
+
+.basic-plans {
+    padding-bottom: 10px;
+    margin-bottom: -1px;
+
+    @include for-size(tabletLarge-view) {
+        width: 30%;
+        border-right: 1px solid $border-color;
+        border-bottom: 0;
+        padding: 5px 15px 5px 0px;
+    }
+
+    .individual-plan {
+        margin-bottom: 10px;
+    }
+}
+
+.basic-cares {
+    @include for-size(tabletLarge-view) {
+        width: 70%;
+        padding: 0px 20px;
+    }
+
+    @include for-size(desktop-view) {
+        padding: 0px 40px;
+    }
+    @include for-size(laptop-view-new) {
+        padding: 0px;
+    }
+}
+
+.table-block {
+    width: 100%;
+
+    thead {
+        tr {
+            @include for-size(tabletLarge-view) {
+                justify-content: space-between;
+            }
+        }
+    }
+
+    th {
+        display: none;
+
+        @include for-size(tablet-view) {
+            display: table-cell;
+            @include fontsize(14px);
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        @include for-size(tabletLarge-view) {
+            width: 50%;
+            text-align: left;
+        }
+
+        @include for-size(desktop-view) {
+            margin-bottom: 10px;
+        }
+    }
+
+    td {
+        display: flex;
+        justify-content: space-between;
+        @include fontsize(12px);
+        padding: 7px 0px 10px;
+        @include for-size(laptop-view-new) {
+            padding: 12px 0px 12px;
+        }
+
+        &:not(:last-child) {
+            border-bottom: 1px solid $border-color;
+
+            @include for-size(tablet-view) {
+                border: 0;
+            }
+        }
+
+        @include for-size(small-mobile) {
+            @include fontsize(16px);
+        }
+
+        @include for-size(tablet-view) {
+            display: table-cell;
+        }
+
+        @include for-size(tabletLarge-view) {
+            width: 50%;
+        }
+
+        &::before {
+            content: attr(data-th) " ";
+            @include fontsize(12px);
+            font-weight: 600;
+            width: 120px;
+            display: inline-block;
+
+            @include for-size(small-mobile) {
+                @include fontsize(16px);
+                width: 100%;
+            }
+
+            @include for-size(tablet-view) {
+                display: none;
+            }
+        }
+    }
+}
+
+.head-icon {
+    background-color: $black;
+    color: $white;
+    display: inline-block;
+    border-radius: 4px;
+    padding: 4px 13px 5px;
+    margin-bottom: 3px;
+    font-weight: 600;
+    @include fontsize(12px);
+
+    @include for-size(tablet-view) {
+        @include fontsize(14px);
+        margin-bottom: 15px;
+    }
+    @include for-size(laptop-view-new) {
+        margin-bottom: 19px;
+    }
+}
+
+@include for-size(tabletLarge-view) {
+    .table-secondary {
+        display: block;
+        border: 1px solid $border-color;
+        border-radius: 10px;
+        padding: 15px 10px;
+        padding-bottom: 0;
+        padding-top: 26px;
+        @include for-size(tabletLarge-view) {
+            border: 0;
+        }
+
+        thead {
+            display: block;
+
+            @include for-size(tablet-view) {
+                margin-bottom: 20px;
+            }
+
+            @include for-size(tabletLarge-view) {
+                margin-bottom: 50px;
+            }
+        }
+
+        tbody {
+            display: block;
+
+            tr {
+                @include for-size(tablet-view) {
+                    background-color: $bottom-bg-secondary;
+                    border-radius: 10px;
+                    padding: 0px 30px 0px 10px;
+
+                    &:not(:last-child) {
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+
+        tr {
+            display: block;
+
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+
+        th {
+            display: none;
+
+            @include for-size(tablet-view) {
+                display: table-cell;
+                width: 20%;
+            }
+
+            @include for-size(tabletLarge-view) {
+                @include fontsize(14px);
+                font-weight: 600;
+                white-space: nowrap;
+                text-align: start;
+            }
+
+            @include for-size(laptop-view) {
+                width: 12%;
+            }
+
+            @include for-size(desktop-view) {
+                width: 17%;
+            }
+
+            @include for-size(large-desktop-view) {
+                padding: 0px 8px;
+            }
+        }
+
+        td {
+            display: block;
+            @include fontsize(12px);
+            display: flex;
+            justify-content: space-between;
+
+            @include for-size(small-mobile) {
+                @include fontsize(16px);
+            }
+
+            @include for-size(tablet-view) {
+                display: table-cell;
+                width: 23%;
+                padding: 10px 5px;
+            }
+
+            @include for-size(tabletLarge-view) {
+                width: 22%;
+                padding: 15px 7px;
+                white-space: nowrap;
+                text-align: start;
+            }
+
+            @include for-size(laptop-view) {
+                padding: 15px 8px;
+            }
+
+            @include for-size(desktop-view) {
+                padding: 15px 14px;
+            }
+
+            @include for-size(large-desktop-view) {
+                padding: 15px 20px;
+            }
+
+            &::before {
+                content: attr(data-th) " ";
+                @include fontsize(12px);
+                font-weight: 600;
+                margin-bottom: 5px;
+                width: 120px;
+                display: inline-block;
+
+                @include for-size(small-mobile) {
+                    @include fontsize(16px);
+                }
+
+                @include for-size(tablet-view) {
+                    display: none;
+                }
+            }
+        }
+
+        .subtitle {
+            color: $main-secondary;
+            margin-bottom: 5px;
+
+            & span {
+                font-weight: 600;
+            }
+
+            @include for-size(tablet-view) {
+                @include fontsize(14px);
+            }
+        }
+    }
+}
+
+@include for-size(tabletLarge-view-reverse) {
+    .table-secondary {
+        box-shadow: 0px 0px 8px 2px #7b4ded0d;
+        border: 1px solid #eaeaea;
+        border-radius: 10px;
+        padding: 10px 8px;
+        display: flex;
+        justify-content: space-between;
+        @include for-size(tabletLarge-view) {
+            display: block;
+        }
+        thead {
+            display: flex;
+            align-items: end;
+            @include for-size(tabletLarge-view) {
+                justify-content: end;
+            }
+            tr {
+                display: flex;
+                flex-direction: column;
+                @include for-size(tabletLarge-view) {
+                    flex-direction: row;
+                    width: 100%;
+                    justify-content: end;
+                }
+                th {
+                    font-size: 12px;
+                    font-weight: 500;
+                    @include for-size(tabletLarge-view) {
+                        max-width: 100px;
+                    }
+
+                    &:not(:last-child) {
+                        margin-bottom: 12px;
+                    }
+                }
+            }
+        }
+        tbody {
+            display: flex;
+            gap: 29px;
+            @include for-size(tabletLarge-view) {
+                flex-direction: column;
+            }
+            tr {
+                padding-left: 20px;
+                position: relative;
+                @include for-size(tabletLarge-view) {
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: start;
+                }
+                &::after {
+                    content: "";
+                    position: absolute;
+                    height: 80%;
+                    bottom: 0;
+                    left: 0;
+                    display: block;
+                    width: 0.1rem;
+                    background: #eaeaea;
+                    @include for-size(tabletLarge-view) {
+                        display: none;
+                    }
+                }
+                td {
+                    font-size: 12px;
+                    font-weight: 500;
+                    color: $text-black;
+                    @include for-size(tabletLarge-view) {
+                        max-width: 100px;
+                    }
+                    &:first-child {
+                        font-weight: 600;
+                        color: #540be0;
+                    }
+                    &:not(:last-child) {
+                        margin-bottom: 12px;
+                    }
+                }
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+.icon-individual {
+    display: inline-block;
+    background: url("../../assets/images/icon-individual.png") no-repeat center;
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+}
+
+.icon-family {
+    display: inline-block;
+    background: url("../../assets/images/icon-family.png") no-repeat center;
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+}

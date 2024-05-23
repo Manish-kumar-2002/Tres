@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import "./global.scss";
+@import "../../Component/Header/Header.scss";
+@import "../../Component/profile/Profile.scss";
+@import "../../Component/Sidebar/Sidebar.scss";
+@import "../../Component/CardBackground/CardBackground.scss";
+@import "../../Component/DetailedBtn/DetailedBtn.scss";
+@import "../../Component/card/Card.scss";
+@import "../../Component/MainCard/MainCard.scss";
+@import "../../pages/ManageEmployee/ManageEmployee.scss";
+@import "../../Component/MobileHeader/MobileHeader.scss";
+@import "../../Component/MobileSidebar/MobileSidebar.scss";
+@import "../../Component/AddSearchEmployee/AddSearchEmployee.scss";
+@import "../../Component/FilterBy/FilterBy.scss";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Montserrat", sans-serif;
+    background: #f2f2f2;
+}
+a {
+    text-decoration: none;
+}
+.container {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    @include for-size(extra-large-desktop) {
+        max-width: none;
+    }
+}
+.bg-heading {
+    background: #f9f7fe;
+    border-radius: 10px;
+    padding: 7px;
+    width: 100%;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: -0.6px;
+    @include for-size(tablet-view) {
+        background: transparent;
+        border-radius: 0px;
+    }
+    @include for-size(laptop-view-new) {
+        letter-spacing: 0px;
+    }
+}
+
+// buttons
+.btn-one {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    background-color: #240151;
+    border: 0.1rem solid #240151;
+    color: #fff;
+    @include fontsize(14px);
+    border-radius: 25px;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 11px;
+    @include for-size(tabletLarge-view) {
+        @include fontsize(16px);
+        padding: 13px 11px;
+    }
+}
+.btn-two {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+    width: 100%;
+    background-color: #fff;
+    border: 0.1rem solid #240151;
+    color: #240151;
+    @include fontsize(14px);
+    border-radius: 25px;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 11px;
+    @include for-size(tabletLarge-view) {
+        @include fontsize(16px);
+        padding: 13px 11px;
+    }
+}
+
+input[value].form-control {
+    background-color: $input-bg;
+}
+
+// #root {
+//     opacity: 0.5;
+// }
+
+// @media all and (min-width: 375px) {
+//     body {
+//         background: url("../images/_12employee\ details\ \(view\).png")
+//             no-repeat top center;
+//         min-height: 12000px;
+//         // margin-top: 31px !important;
+//         margin-top: 2px;
+//     }
+// }

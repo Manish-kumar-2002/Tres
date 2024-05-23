@@ -1,0 +1,28 @@
+@import "../../assets/css/global.scss";
+
+.plan-submenu {
+    ul {
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 6px;
+        li {
+            width: 100%;
+            text-align: center;
+            .plan-submenu-link {
+                @include fontsize(16px);
+                color: #9f9f9f;
+                width: 100%;
+                background: #f2f2f2;
+                padding: 12px 24px 12px 24px;
+                border-radius: 40px;
+                font-weight: 600;
+                &.active {
+                    background: #240151;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

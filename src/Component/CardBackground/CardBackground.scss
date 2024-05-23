@@ -1,0 +1,56 @@
+.dashborad-wrap {
+    width: 100%;
+    @include for-size(tablet-view) {
+        width: calc(100% - 284px);
+    }
+}
+.top-banner {
+    background: url("../../assets/images/mobileb-bg.png") no-repeat;
+    background-size: cover;
+    // max-width: 1104px;
+    width: 100%;
+    height: 440px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: -3%;
+    padding-top: 91px;
+    @include for-size(tablet-view) {
+        padding: 23px;
+        margin-top: 0;
+        height: 192px;
+        border-radius: 10px;
+        background: url("../../assets/images/BG.png") no-repeat;
+        background-size: cover;
+    }
+    h1 {
+        margin-bottom: 9px;
+    }
+    .welcome-msg {
+        display: block;
+        @include fontsize(14px);
+        line-height: 20px;
+        color: $white;
+        font-weight: 500;
+        @include for-size(tabletLarge-view) {
+            display: none;
+        }
+    }
+    .message-wrap {
+        width: 100%;
+        .name-admin {
+            display: none;
+        }
+        @include for-size(tabletLarge-view) {
+            display: flex;
+            justify-content: space-between;
+            .name-admin {
+                display: block;
+                font-size: 24px;
+                font-weight: 500;
+                line-height: 29.26px;
+                color: #fff;
+            }
+        }
+    }
+}

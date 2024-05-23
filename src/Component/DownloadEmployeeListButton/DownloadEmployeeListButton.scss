@@ -1,0 +1,12 @@
+@import '../../assets/css/variable.scss';
+@import '../../assets/css/mixin.scss';
+.download-employee-list{
+    .btn-two{
+        @include for-size(tabletLarge-view){
+            min-width: 216px;
+        }
+        i{
+            filter: brightness(0) saturate(100%) invert(8%) sepia(90%) saturate(2796%) hue-rotate(260deg) brightness(93%) contrast(116%);
+        }
+    }
+}

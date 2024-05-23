@@ -1,0 +1,44 @@
+@import "../../assets/css/variable.scss";
+@import "../../assets/css/mixin.scss";
+.add-staff {
+    .main-card {
+        padding: 25px 21px;
+        @include for-size(tabletLarge-view) {
+            padding: 72px 40px 25px !important;
+        }
+    }
+    .submit-btn {
+        margin-top: 27px;
+    }
+    .add-staff-wrap {
+        @include for-size(tabletLarge-view) {
+            border: 1px solid #eaeaea;
+            border-radius: 10px;
+            padding: 23px;
+            padding-bottom: 0;
+        }
+
+        .fill-details-wrap {
+            @include for-size(tabletLarge-view) {
+                border: none;
+                padding: 0;
+            }
+            @include for-size(laptop-view-new) {
+                margin-bottom: 2px;
+            }
+            h5.alignfor-checkbox {
+                @include for-size(laptop-view-new) {
+                    margin-bottom: 13px;
+                }
+            }
+            &:not(:first-child) {
+                @include for-size(tabletLarge-view) {
+                    padding-top: 26px;
+                    border: none;
+                    border-top: 1px solid #eaeaea;
+                    border-radius: 0;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,144 @@
+.cards {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 18px;
+    overflow-x: auto;
+    white-space: nowrap;
+    margin-left: 20px;
+    padding-bottom: 6px;
+
+    @include for-size(tablet-view) {
+        border: none;
+        padding: 0;
+    }
+    @include for-size(tabletLarge-view) {
+        justify-content: space-between;
+        margin-left: 0;
+        padding: 0 25px;
+        margin-bottom: 30px;
+    }
+    .card-wrap {
+        display: flex;
+        flex: none;
+        padding: 15px 10px;
+        flex-direction: column;
+        gap: 8px;
+        width: 36.4%;
+        background: $white;
+        border-radius: 10px;
+        position: relative;
+        border: 1px solid $border-color;
+        @include for-size(tabletLarge-view) {
+            // max-width: 246px;
+            width: 23.4%;
+        }
+        @include for-size(laptop-view-new) {
+            padding: 23px;
+        }
+        .card-members {
+            border-top: 0.5px solid #b3b3b3;
+            border-style: dashed;
+            padding-top: 10px;
+            @include for-size(tabletLarge-view) {
+                padding-top: 15px;
+                margin-top: 7px;
+            }
+            li {
+                position: relative;
+                padding-left: 10px;
+                @include fontsize(8px);
+                font-weight: 600;
+                display: flex;
+                justify-content: space-between;
+                &:not(:last-child) {
+                    margin-bottom: 10px;
+                }
+                &::after {
+                    background: #000;
+                    content: "";
+                    width: 0.375rem;
+                    height: 0.375rem;
+                    border-radius: 50%;
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    transform: translateY(-50%);
+                }
+                &:first-child:after {
+                    background: $active-list;
+                }
+                &:last-child:after {
+                    background: $waiting-list;
+                }
+                @include for-size(laptop-view-new) {
+                    @include fontsize(12px);
+                }
+            }
+        }
+        .show-img {
+            width: 40px;
+            height: 40px;
+            margin: 0 auto;
+            margin-bottom: 8px;
+            @include for-size(tabletLarge-view) {
+                margin: 0;
+                flex: none;
+            }
+            @include for-size(laptop-view-new) {
+                width: 64px;
+                height: 64px;
+            }
+        }
+        .card-profile-wrap {
+            @include for-size(tabletLarge-view) {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+            }
+        }
+    }
+}
+.card-details {
+    color: $text-black;
+    text-align: center;
+    @include for-size(tablet-view) {
+        text-align: center;
+        margin: 0 auto;
+    }
+    @include for-size(tabletLarge-view) {
+        text-align: start;
+        margin: 0;
+    }
+}
+.card-num {
+    font-weight: 600;
+    margin-bottom: 3px;
+    @include fontsize(16px);
+    @include for-size(tabletLarge-view) {
+        margin-bottom: 9px;
+    }
+    @include for-size(laptop-view-new) {
+        @include fontsize(24px);
+    }
+}
+.card-name {
+    font-weight: 400;
+    @include fontsize(10px);
+
+    @include for-size(laptop-view-new) {
+        @include fontsize(16px);
+    }
+}
+
+// ::-webkit-scrollbar{
+//   width: 10px;
+// }
+// ::-webkit-scrollbar-track{
+//   background-color: #000;
+// }
+// ::-webkit-scrollbar-thumb{
+//   background-color: red;
+//   border-radius: 10px;
+// }

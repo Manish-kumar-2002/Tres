@@ -1,0 +1,9 @@
+@import '../../assets/css/variable.scss';
+@import '../../assets/css/mixin.scss';
+.add-employee{
+    .main-card{
+        @include for-size(laptop-view-new){
+            padding: 40px;
+        }
+    }
+}

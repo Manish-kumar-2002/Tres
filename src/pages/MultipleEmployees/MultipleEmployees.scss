@@ -1,0 +1,160 @@
+@import '../../assets/css/variable.scss';
+@import '../../assets/css/mixin.scss';
+.multiple-employee{
+    .main-card{
+        padding: 25px 21px;
+    }
+    .bg-heading{
+        margin-bottom: 28px;
+        @include for-size(tablet-view){
+            display: none;
+        }
+
+    }
+    .download-employee-list{
+        @include for-size(laptop-view-new){
+            min-width: auto;
+            width: 260px;
+        }
+    }
+    .progress-bar-wrap {
+        @include for-size(tabletLarge-view){
+            margin-bottom: 39px;
+        }
+    }
+    .multiple-upload-wrap{
+        padding: 17px 15px;
+        box-shadow: 0px 0px 8px 2px #7B4DED0D;
+        border: 1px solid #EAEAEA;
+        background: #FFFFFF;
+        border-radius: 10px;
+        @include for-size(tablet-view){
+            padding: 0px;
+            border: none;
+            border-radius: 0px;
+            background: transparent;
+            box-shadow: none;
+        }
+        .file-upload-block{
+            @include for-size(tablet-view){
+                padding: 20px;
+                background: #F9F7FE;
+                border-radius: 10px;
+            }
+            @include for-size(laptop-view-new){
+                padding: 25px;
+            }
+
+        }
+        h5{
+            @include fontsize(18px);
+            font-weight: 700;
+            margin-bottom: 18px;
+        }
+        @include for-size(tabletLarge-view){
+            .head-btn-align{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 16px;
+                @include for-size(laptop-view-new){
+                    margin-bottom: 41px;
+                }
+            }
+            h5{
+                margin-bottom: 0;
+            }
+        }
+        .custom-file-wrap{
+            position: relative;
+            height: 216px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 20px;
+            @include for-size(tabletLarge-view){
+                height:232px;
+            }
+            .custom-file-label{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 216px;
+                border-radius: 20px;
+                border: 1px solid #D8C8F8;
+                @include for-size(tabletLarge-view){
+                    height:232px;
+                }
+                .file-label-wrap{
+                   width: 195px;
+                   @include for-size(tablet-view){
+                        width: 100%;
+                    }
+                    .upload-icon{
+                        margin: 0 auto;
+                        display: block;
+                        width: 80px;
+                        height: 80px;
+                        border-radius: 10px;
+                        background-color: #F2F2F2;
+                        background-image: url('../../assets/images/upload-icon.svg');
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        margin-bottom: 13px;
+                    }
+                    p{
+                        color: #9F9F9F;
+                        text-align: center;
+                        @include fontsize(14px);
+                        font-weight: 600;
+                        margin-bottom:0px;
+                        @include for-size(tabletLarge-view){
+                            letter-spacing: 1px;
+                        }
+                    }
+                }
+                
+            }
+            .custom-file{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 216px;
+                border-radius: 20px;
+                border: 1px solid #D8C8F8;
+                background: transparent;
+                opacity: 0;
+                @include for-size(tabletLarge-view){
+                    height:232px;
+                }
+            }
+        }
+        .upload-btn-wrap{
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            gap: 9px;
+            margin-top: 17px;
+            .btn-one,.btn-two{
+                width: 120px;
+                @include for-size(tabletLarge-view){
+                    width: 124px;
+                }
+            }
+            @include for-size(tabletLarge-view){
+                gap: 8px;
+                margin-top: 22px;
+            }
+        }
+        
+    }
+    .download-list-wrap{
+        border-top: 1px solid #EAEAEA;
+        margin-top: 22px;
+        padding-top: 24px;
+    }
+}

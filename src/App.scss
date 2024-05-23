@@ -1,0 +1,17 @@
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "./assets/css/global.scss";
+.main-section .container {
+    display: flex;
+    padding: 0;
+    gap: 20px;
+    @include for-size(tablet-view) {
+        padding: 24px;
+        gap: 24px;
+    }
+}
+#root {
+    padding-bottom: 60px;
+    @include for-size(tablet-view) {
+        padding-bottom: 0px;
+    }
+}

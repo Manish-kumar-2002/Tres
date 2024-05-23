@@ -1,0 +1,25 @@
+.main-card{
+    background: $white;
+    // padding: 22px 0;
+    margin: 0;
+    max-width: 100%;
+    border-radius: 0;
+    min-height: calc(100vh - 125.2px);
+    @include for-size(tablet-view){
+    border: 1px solid $border-color;
+        margin: 0 23px;  
+        border-radius: 10px;
+        padding: 22px;
+        min-height: 100vh;
+    }
+    @include for-size(tablet-view){
+        margin-top: -80px; 
+    }
+    @include for-size(tabletLarge-view){
+        margin-top: -108px !important;
+    }
+    @include for-size(laptop-view-new){
+        padding: 40px !important;
+    }
+    
+}

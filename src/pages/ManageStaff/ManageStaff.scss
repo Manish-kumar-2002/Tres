@@ -1,0 +1,103 @@
+@import "../../assets/css/variable.scss";
+@import "../../assets/css/mixin.scss";
+.manage-staff {
+    .main-card {
+        @include for-size(tablet-view) {
+            padding: 30px !important;
+        }
+        @include for-size(laptop-view-new) {
+            padding: 40px !important;
+        }
+    }
+    .addemployee-btn-wrap {
+        border: none;
+        justify-content: end;
+        margin-right: 20px;
+        @include for-size(tabletLarge-view) {
+            margin-bottom: 16px;
+            margin-right: 0;
+        }
+        .add-employee-btn {
+            width: fit-content;
+        }
+    }
+    .table-wrap {
+        padding: 0 0 0 20px;
+        @include for-size(tabletLarge-view) {
+            padding: 0;
+        }
+    }
+    .main-card {
+        padding: 20px 0;
+    }
+    .edit-btn-wrap {
+        button {
+            background-color: transparent;
+            border: none;
+        }
+    }
+}
+
+.delete-staff {
+    padding: 20px;
+    .warning-icon {
+        display: block;
+        width: 56px;
+        height: 56px;
+        background: url("../../assets/images/warning-icon.svg");
+        background-size: 100%;
+        margin: 0 auto;
+        margin-bottom: 26px;
+        @include for-size(tablet-view) {
+            width: 64px;
+            height: 64px;
+        }
+    }
+    h6 {
+        @include fontsize(20px);
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 18px;
+        @include for-size(tablet-view) {
+            @include fontsize(30px);
+        }
+    }
+    p {
+        @include fontsize(14px);
+        font-weight: 500;
+        text-align: center;
+        color: $black;
+        margin-bottom: 20px;
+        @include for-size(tablet-view) {
+            @include fontsize(18px);
+        }
+    }
+    .popup-inner-button {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        justify-content: center;
+    }
+}
+.align-cancel-btn {
+    .btn-close {
+        position: absolute;
+        bottom: 46px;
+        right: 46px;
+        width: 39%;
+        text-align: center;
+        background-color: transparent;
+        border: none;
+        color: #fff;
+        font-size: 1rem;
+        border-radius: 25px;
+        font-weight: 600;
+        line-height: 20px;
+        z-index: 1;
+        font-size: 0;
+        padding: 20px 0 !important;
+        &:focus {
+            box-shadow: none;
+        }
+    }
+}

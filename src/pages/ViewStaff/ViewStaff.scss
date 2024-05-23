@@ -1,0 +1,100 @@
+@import "../../assets/css/variable.scss";
+@import "../../assets/css/mixin.scss";
+.view-staff {
+    .form-control {
+        background-color: #f9f7fe;
+    }
+    .main-card {
+        padding: 25px 21px;
+        @include for-size(tabletLarge-view) {
+            padding: 72px 40px 25px !important;
+        }
+        @include for-size(tabletLarge-view) {
+            padding: 96px 40px 25px !important;
+        }
+    }
+    .submit-btn {
+        margin-top: 27px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        .edit-icon {
+            background: url("../../assets/images/edit.svg") no-repeat;
+            display: inline-block;
+            width: 24px;
+            background-size: 100%;
+            height: 24px;
+            filter: brightness(0) saturate(100%) invert(98%) sepia(54%)
+                saturate(124%) hue-rotate(195deg) brightness(115%)
+                contrast(100%);
+        }
+    }
+    .add-staff-wrap {
+        @include for-size(tabletLarge-view) {
+            border: 1px solid #eaeaea;
+            border-radius: 10px;
+            padding: 23px;
+            padding-bottom: 0;
+        }
+
+        .fill-details-wrap {
+            @include for-size(tabletLarge-view) {
+                border: none;
+                padding: 0;
+            }
+            @include for-size(laptop-view-new) {
+                margin-bottom: 2px;
+            }
+            h5.alignfor-checkbox {
+                @include for-size(laptop-view-new) {
+                    margin-bottom: 13px;
+                }
+            }
+            &:not(:first-child) {
+                @include for-size(tabletLarge-view) {
+                    padding-top: 26px;
+                    border: none;
+                    border-top: 1px solid #eaeaea;
+                    border-radius: 0;
+                }
+            }
+        }
+    }
+    .back-btn-top {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        display: none;
+        @include for-size(tabletLarge-view) {
+            display: flex;
+            right: 64px;
+            top: 20px;
+        }
+        .submit-btn {
+            margin: 0;
+        }
+        .btn-two {
+            width: 164px;
+            padding: 11px;
+            .edit-icon {
+                background: url("../../assets/images/edit.svg") no-repeat;
+                display: inline-block;
+                width: 24px;
+                background-size: 100%;
+                height: 24px;
+                filter: brightness(0) saturate(100%) invert(8%) sepia(72%)
+                    saturate(3033%) hue-rotate(259deg) brightness(99%)
+                    contrast(119%);
+            }
+        }
+        .back-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            color: #240151;
+        }
+    }
+}

@@ -1,0 +1,39 @@
+@import "../../assets/css/variable.scss";
+@import "../../assets/css/mixin.scss";
+.provider-networks {
+    margin-bottom: 24px;
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 23px;
+    h2 {
+        color: #221f20;
+        margin-bottom: 16px;
+        font-weight: 700;
+    }
+    .networks-wrap {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        .networks-show {
+            overflow: hidden;
+            width: 140px;
+            height: 120px;
+            border-radius: 20px;
+            border: 1px solid #c8f7f9;
+            .networks-img {
+                padding: 18px 0;
+                img {
+                    display: block;
+                    margin: 0 auto;
+                }
+            }
+            .networks-name {
+                background: #c8f7f9;
+                padding: 12.4px 0 14px;
+                color: #240151;
+                font-size: 14px;
+                font-weight: 600;
+                text-align: center;
+            }
+        }
+    }
+}

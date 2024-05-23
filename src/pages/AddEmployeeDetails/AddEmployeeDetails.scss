@@ -1,0 +1,13 @@
+@import "../../assets/css/variable.scss";
+@import "../../assets/css/mixin.scss";
+.add-employee-details {
+    .main-card {
+        padding: 20px 20px 30px;
+        @include for-size(tabletLarge-view) {
+            padding: 60px 30px 30px !important;
+        }
+    }
+    .back-btn-top {
+        top: -38px !important;
+    }
+}

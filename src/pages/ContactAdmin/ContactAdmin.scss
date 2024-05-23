@@ -1,0 +1,73 @@
+@import '../../assets/css/variable.scss';
+@import '../../assets/css/mixin.scss';
+.contact-admin{
+    .main-card{
+        padding: 16px 18px !important;
+    }
+    .reach-info{
+        width: 100%;
+        margin-bottom: 18px;
+        @include for-size(tabletLarge-view){
+            max-width: 420px;
+        }
+        @include for-size(laptop-view-new){
+            margin-bottom: 31px;
+        }
+        p{
+            font-weight: 600;
+            @include fontsize(16px);
+            letter-spacing: 0.6px;
+            line-height: 1.7;
+            margin-bottom: 0;
+            @include for-size(tabletLarge-view){
+                @include fontsize(18px);
+                letter-spacing: 0;
+                line-height: normal;
+            }
+        }
+    }
+    .form-text{
+        padding: 30px;
+        min-height: 210px;
+        resize: none;
+        @include for-size(tabletLarge-view){
+            min-height: 150px;
+
+        }
+    }
+    .submit-btn{
+        display: block;
+        @include fontsize(16px);
+        font-weight: 600;
+        padding: 14px 42px;
+        border-radius: 50px;
+        border: none;
+        color: $white;
+        background-color: $main-primary;
+        width: 100%;
+        margin-top: 15px;
+        @include for-size(tablet-view){
+            margin: 20px 0 auto auto;
+            width: auto;
+        }
+        @include for-size(laptop-view-new){
+            margin-top: 0px;
+        }
+    }
+    .need-assistance{
+        color: #540BE0;
+        @include fontsize(16px);
+        font-weight: 600;
+        display: block;
+        @include for-size(tabletLarge-view){
+            display: inline-block;
+            @include fontsize(18px);
+        }
+    }
+    .contact-form{
+        & > .row{
+            padding: 0 7px;
+        }
+    }
+  
+}

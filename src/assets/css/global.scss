@@ -1,0 +1,707 @@
+@import "./mixin.scss";
+@import "./variable.scss";
+/* Eric Meyer's Reset */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    list-style-type: none;
+}
+*:focus-visible {
+    box-shadow: 0px 0px 0px 1px #000 inset !important;
+    border-radius: 25px;
+}
+
+*,
+:before,
+:after {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    outline: none;
+}
+
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 100%;
+    line-height: 1.2;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: $black;
+    position: relative;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body img {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+*:focus {
+    outline: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+/*
+ 2.0.1) Font Face
+ -----------------------------*/
+@font-face {
+    font-family: "Oswald-ExtraLight";
+    src: url("../fonts/Oswald-ExtraLight.woff2") format("woff2"),
+        url("../fonts/Oswald-ExtraLight.woff") format("woff");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+h1 {
+    @include fontsize(24px);
+    color: $white;
+    font-weight: 600;
+    @include for-size(desktop-view) {
+        @include fontsize(30px);
+    }
+}
+
+h2 {
+    @include fontsize(18px);
+    margin-bottom: 12px;
+    font-weight: 600;
+    line-height: 26px;
+}
+
+h3 {
+    @include fontsize(18px);
+    margin-bottom: 10px;
+}
+
+h4 {
+    @include fontsize(22px);
+    margin-bottom: 15px;
+
+    @include for-size(desktop-view) {
+        @include fontsize(30px);
+    }
+}
+
+h5 {
+    @include fontsize(18px);
+    margin-bottom: 10px;
+}
+
+p {
+    @include fontsize(16px);
+    line-height: 1.7;
+    margin-bottom: 26px;
+}
+
+/*
+ 2.0.3) Form Elements
+ -----------------------------*/
+input {
+    margin: 0;
+    padding: 0;
+    @include fontsize(14px);
+    color: inherit;
+    background: transparent;
+    border: 1px solid transparent;
+    width: 100%;
+    line-height: normal;
+}
+
+strong,
+b {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+blockquote {
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:focus {
+    outline: none;
+    border: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: 0;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    padding: 0;
+    border: none;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+input[type="file"] {
+    cursor: pointer;
+    line-height: normal;
+    overflow: visible;
+}
+
+button[disabled],
+input[disabled] {
+    cursor: default;
+    color: #999;
+    border-color: #ccc;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+.icon-heart {
+    background-position: -100px -6px;
+    background-size: 200px 200px;
+    width: 15px;
+    height: 14px;
+}
+
+.icon-heart-white {
+    background-position: -124px -6px;
+    background-size: 200px 200px;
+    width: 15px;
+    height: 14px;
+}
+
+.main-container-wrap {
+    width: 100%;
+    @include for-size(tablet-view) {
+        width: calc(100% - 284px);
+    }
+}
+
+// Search by employee name
+.search-block {
+    position: relative;
+    width: 100%;
+    margin-bottom: 17px;
+
+    @include for-size(tabletLarge-view) {
+        margin-bottom: 0;
+        max-width: 363px;
+    }
+    .Search-icon {
+        display: block;
+        width: 28px;
+        height: 29px;
+        background: url("../../../assets/images/search-icon.svg") no-repeat;
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translate(-50%, -50%);
+    }
+    .search-control {
+        padding: 18px 46px 18px 16px;
+        border-radius: 30px;
+        border: 0.1rem solid $main-primary;
+        color: $main-primary;
+        font-weight: 600;
+        &::placeholder {
+            color: #9f9f9f;
+        }
+        @include for-size(tabletLarge-view) {
+            padding: 14px;
+            padding-right: 46px;
+            @include fontsize(16px);
+        }
+    }
+}
+
+.sidebar-link {
+    padding: 20px 15px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    i {
+        display: block;
+    }
+    .dashborad-icon {
+        background: url("../../../assets/images/sidebar-icon1.svg") no-repeat;
+        width: 24px;
+        height: 24px;
+    }
+    .employees-icon {
+        background: url("../../../assets/images/manage-employee.svg") no-repeat;
+        width: 24px;
+        height: 24px;
+    }
+    .staff-icon {
+        background: url("../../../assets/images/manage-staff.svg") no-repeat;
+        width: 26px;
+        height: 24px;
+    }
+    .plans-icon {
+        background: url("../../../assets/images/plans.svg") no-repeat;
+        width: 23px;
+        height: 20px;
+    }
+    .notifications-icon {
+        background: url("../../../assets/images/notifications.svg") no-repeat;
+        width: 20px;
+        height: 22px;
+    }
+    .docs-icon {
+        background: url("../../../assets/images/download-docs-icon.svg")
+            no-repeat;
+        width: 21px;
+        height: 24px;
+    }
+    .admin-icon {
+        background: url("../../../assets/images/contact-admin-icon.svg")
+            no-repeat;
+        width: 21px;
+        height: 24px;
+    }
+    &.active,
+    &:hover {
+        border-radius: 100px;
+        background: #c8f7f9;
+        color: #540be0;
+        i {
+            filter: brightness(0) saturate(100%) invert(15%) sepia(98%)
+                saturate(7495%) hue-rotate(265deg) brightness(84%)
+                contrast(112%);
+        }
+    }
+}
+
+.plans-color-code {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    @include for-size(laptop-view-new) {
+        gap: 10px;
+    }
+    .plans-color {
+        color: $text-black;
+        @include fontsize(12px);
+        line-height: 16px;
+        position: relative;
+        font-weight: 600;
+        padding-left: 14px;
+        &:after {
+            content: "";
+            width: 0.5rem;
+            height: 0.5rem;
+            border-radius: 50%;
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+    }
+    .medical-color:after {
+        background: $medical-color;
+    }
+    .dental-color:after {
+        background: $dental-color;
+    }
+    .vision-color:after {
+        background: $vision-color;
+    }
+}
+
+.modal-header {
+    border: none;
+    padding: 0;
+}
+.modal.show .modal-dialog {
+    transform: translateY(-50%);
+    top: 50%;
+    transition: none;
+    left: 0;
+}
+.modal.fade .modal-dialog {
+    transition: none;
+}
+
+.table-wrap {
+    padding-right: 0;
+    @include for-size(tabletLarge-view) {
+        padding: 0;
+    }
+    .table {
+        thead {
+            tr {
+                th {
+                    height: 57px;
+                    vertical-align: middle;
+                    text-align: center;
+                    white-space: nowrap;
+                }
+            }
+        }
+        tr {
+            th:last-child,
+            td:last-child {
+                border-radius: 0px 10px 10px 0px;
+            }
+            th:first-child,
+            td:first-child {
+                border-radius: 10px 0px 0px 10px;
+            }
+        }
+        tbody {
+            tr {
+                border-bottom: 2px solid #eaeaea;
+                td {
+                    vertical-align: middle;
+                    text-align: center;
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+    .plan-tag-wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        .plan-tag {
+            display: block;
+            text-align: center;
+            width: 50px;
+            padding: 5px;
+            border-radius: 4px;
+            color: $white;
+            background: $vision-color;
+            @include fontsize(12px);
+            &.medical {
+                background: $medical-color;
+            }
+            &.dental {
+                background: $dental-color;
+            }
+            &.vision {
+                background: $vision-color;
+            }
+        }
+    }
+    .edit-btn-wrap {
+        display: flex;
+        justify-content: center;
+        gap: 6px;
+        i {
+            border: 0.1rem solid $main-primary;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: block;
+            cursor: pointer;
+            &.edit {
+                background: url("../../../assets/images/edir-icon.svg")
+                    no-repeat;
+                background-position: center;
+            }
+            &.view {
+                background: url("../../../assets/images/view-icon.svg")
+                    no-repeat;
+                background-position: center;
+            }
+            &.delete {
+                background: url("../../../assets/images/delete-icon.svg")
+                    no-repeat;
+                background-position: center;
+            }
+            &.download {
+                background: url("../../../assets/images/arrow-download.svg")
+                    no-repeat;
+                background-position: center;
+                filter: brightness(0) saturate(100%) invert(10%) sepia(65%)
+                    saturate(3212%) hue-rotate(259deg) brightness(80%)
+                    contrast(121%);
+            }
+        }
+    }
+}
+.table-show-entries {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    @include for-size(tabletLarge-view) {
+        padding: 20px 0;
+    }
+    .show-entries-wrap {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        .filter-control-label {
+            @include fontsize(12px);
+            color: $main-primary;
+            font-weight: 600;
+            @include for-size(tabletLarge-view) {
+                @include fontsize(16px);
+            }
+        }
+        select {
+            border: 0.0625rem solid #240151;
+            border-radius: 25px;
+            padding: 4px 7px;
+        }
+    }
+
+    .pagination-wrap {
+        .pagination {
+            display: flex;
+            gap: 8px;
+        }
+        .page-link {
+            border-radius: 50%;
+            border: 0.0625rem solid #9f9f9f;
+            color: #9f9f9f;
+            width: 29px;
+            height: 29px;
+            font-size: 12px;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .active-link {
+            .page-link {
+                background: #240151;
+                color: $white;
+            }
+        }
+    }
+}
+.table-dark {
+    --bs-table-bg: #240151;
+}
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+    --bs-table-bg-type: #e1d6fc;
+}
+
+// for input
+
+.form-label {
+    color: $text-black;
+    @include fontsize(14px);
+    font-weight: 600;
+    margin-bottom: 11px;
+    @include for-size(laptop-view-new) {
+        margin-bottom: 7px;
+    }
+}
+.form-control,
+.form-select {
+    letter-spacing: 0.5px;
+    border-radius: 20px;
+    padding: 9px 15px !important;
+    border: 1px solid $input-border;
+    font-weight: 500;
+    margin-bottom: 23px;
+    @include for-size(tablet-view) {
+        padding: 12px;
+    }
+    @include for-size(tabletLarge-view) {
+        padding: 12px;
+        border-radius: 20px;
+    }
+    @include for-size(laptop-view-new) {
+        letter-spacing: -0.1px;
+        padding: 13px 15px !important;
+        border-radius: 27px;
+    }
+}
+
+.form-check-input[type="checkbox"] {
+    outline: 1px solid $text-black;
+    border-radius: 4px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    overflow: hidden;
+    @include for-size(laptop-view-new) {
+        width: 32px;
+        height: 32px;
+        border-radius: 10px;
+    }
+}
+.form-check-input:checked[type="checkbox"] {
+    --bs-form-check-bg-image: none;
+    background: #18d6dc;
+    border: 2px solid $white;
+    border-radius: 4px;
+    @include for-size(laptop-view-new) {
+        border: 4px solid $white;
+        border-radius: 10px;
+    }
+}
+.form-check-input:focus {
+    box-shadow: none;
+}
+.checkbox-align {
+    margin-bottom: 6px;
+    @include for-size(tablet-view) {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    @include for-size(laptop-view-new) {
+        gap: 26px;
+    }
+    .form-check-label {
+        font-weight: 600;
+        @include fontsize(14px);
+        color: $text-black;
+        cursor: pointer;
+        user-select: none;
+    }
+    .form-check {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 12px;
+    }
+}
+
+.form-control::placeholder {
+    color: $text-color;
+    @include fontsize(16px);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+}
+
+// back-btn-align
+
+.back-btn-align {
+    position: relative;
+    .back-btn-top {
+        @include for-size(tabletLarge-view) {
+            position: absolute;
+            top: 24px;
+            right: 64px;
+        }
+    }
+}

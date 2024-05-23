@@ -1,0 +1,69 @@
+
+
+/*
+ Font-color
+ -------------------------*/
+ $black:#000;
+ $white:#fff;
+ $text-color: #9F9F9F;
+ $border-color: #EAEAEA;
+ $border-color-2: rgba(216,200,248,1);
+ $gray:#ececec;
+ $main-primary: #240151;
+ $main-secondary: #540BE0;
+ $top-bg: #18D6DC;
+ $mid-bg: #C8F7F9;
+ $bottom-bg: #E1D6FC;
+ $input-bg: #F9F7FE;
+ $text-black: #221F20;
+ $input-border: #D8C8F8;
+ $active-list: #5ED779;
+ $waiting-list: #E8CA5E;
+ $medical-color: #18D6DC;
+ $dental-color: #540BE0;
+ $vision-color: #E73B30;
+ $select-placeholder: #9F9F9F;
+ $bottom-bg-secondary: #f9f7fe;
+
+
+/*
+ Font-weight
+ -------------------------*/
+$fw-thin: 100;
+$fw-light: 300;
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-bold: 700;
+
+/*
+ Alignment
+ -------------------------*/
+$align-stretch: stretch;
+$align-center: center;
+$align-start: flex-start;
+$align-end: flex-end;
+$align-end: end;
+/*
+ justify
+ -------------------------*/
+$justify-start: flex-start;
+$justify-end: flex-end;
+$justify-center: center;
+$justify-between: space-between;
+$justify-around: space-around;
+/*
+ text alignment
+ -------------------------*/
+$text-left: left;
+$text-center: center;
+$text-right: right;
+
+/*
+ flex
+ -------------------------*/
+$d-flex: flex;
+$d-wrap: wrap;
+$d-column: column;
+$d-row: row;
+$row-reverse: row-reverse;
+$column-reverse: column-reverse;

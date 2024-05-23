@@ -1,0 +1,27 @@
+.mobile-header{
+    padding: 17px 10px;
+    background: #240151;
+    position: relative;
+    @include for-size(tablet-view){
+        display: none;
+    }
+    h4{
+        font-size: 18px;
+        font-weight: 500;
+        color: $white;
+        text-align: center;
+        margin-bottom: 0;
+    }
+    .back-btn{
+        position: absolute;
+        top: 50%;
+        left: 34px;
+        transform: translate(-50%,-50%);
+        i{
+            display: inline-block;
+            background: url('../../assets/images/back-icon.svg');
+            width: 28px;
+            height: 28px;
+        }
+    }
+}

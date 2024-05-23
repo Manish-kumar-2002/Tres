@@ -1,0 +1,25 @@
+@import "../../assets/css/variable.scss";
+@import "../../assets/css/mixin.scss";
+
+.no-details-wrap {
+    min-height: 100vh;
+    padding-top: 100px;
+    img {
+        display: block;
+        margin: 0 auto;
+        width: 235px;
+        @include for-size(tabletLarge-view) {
+            width: auto;
+        }
+    }
+    h5 {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 24px;
+        text-align: center;
+        margin-top: 16px;
+        @include for-size(tabletLarge-view) {
+            font-size: 20px;
+        }
+    }
+}

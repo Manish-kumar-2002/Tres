@@ -1,0 +1,73 @@
+@import "../../assets/css/variable.scss";
+@import "../../assets/css/mixin.scss";
+
+.plan-documents {
+    border-radius: 10px;
+    @include for-size(tabletLarge-view) {
+        margin: 0;
+        border: 1px solid $border-color-2;
+    }
+    @include for-size(laptop-view-new) {
+        width: 27.2%;
+    }
+    h2 {
+        color: $text-black;
+        margin-bottom: 16px;
+        font-weight: 700;
+
+        @include for-size(tabletLarge-view) {
+            font-weight: 600;
+            padding: 20px 25px;
+            background-color: rgba(249, 247, 254, 1);
+            border-radius: 10px 10px 0px 0px;
+            margin: 0;
+        }
+    }
+}
+
+.documents-wrap {
+    padding: 5px 10px;
+    background-color: $white;
+    border-radius: 8px;
+    border: 1px solid #eaeaea;
+    @include for-size(tabletLarge-view) {
+        padding: 24px 24px 20px;
+        border: none;
+    }
+
+    .document-files {
+        display: flex;
+        justify-content: space-between;
+        padding: 9px 0px;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid $border-color;
+        }
+
+        @include for-size(tablet-view) {
+            padding: 5px 0px 10px;
+        }
+    }
+
+    .icon-download {
+        display: inline-block;
+        background: url("../../assets/images/arrow-download.svg") no-repeat
+            center;
+        width: 14px;
+        height: 20px;
+        border: none;
+    }
+
+    .sub-head {
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 18px;
+        letter-spacing: 0.10000000149011612px;
+        @include for-size(tabletLarge-view) {
+            font-weight: 400;
+        }
+        @include for-size(laptop-view-new) {
+            font-size: 16px;
+        }
+    }
+}

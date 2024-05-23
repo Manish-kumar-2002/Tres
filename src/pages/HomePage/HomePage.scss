@@ -1,0 +1,63 @@
+@import "../../assets/css/variable.scss";
+@import "../../assets/css/mixin.scss";
+.dashborad-details {
+    margin-top: -267px;
+    background-color: $white;
+    border-radius: 24px 24px 0px 0px;
+    padding: 40px 0 0;
+    @include for-size(tablet-view) {
+        margin-top: -142px;
+        background-color: transparent;
+    }
+    @include for-size(tabletLarge-view) {
+        margin-top: -106px;
+    }
+    @include for-size(laptop-view-new) {
+        margin-top: -147px;
+    }
+
+    .member-stats {
+        padding: 0 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        @include for-size(tabletLarge-view) {
+            padding: 0 25px;
+        }
+        .cards-mid {
+            width: 100%;
+            background: $white;
+            padding-top: 24px;
+            border-top: 1px solid $border-color;
+            padding-bottom: 20px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            @include for-size(tablet-view) {
+                padding: 10px;
+                border-radius: 10px;
+            }
+            @include for-size(tabletLarge-view) {
+                width: 48.7%;
+                margin-bottom: 0;
+                padding: 22px;
+            }
+            .plans-color-code {
+                margin-bottom: 10px;
+            }
+            h2 {
+                margin-bottom: 16px;
+            }
+            @include for-size(laptop-view-new) {
+                .card-head-wrap {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+            }
+        }
+    }
+    .active-member-stats img {
+        width: 100%;
+    }
+}

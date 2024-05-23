@@ -1,0 +1,69 @@
+@import "../../assets/css/variable.scss";
+@import "../../assets/css/mixin.scss";
+.addemployee-btn-wrap {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-bottom: 14px;
+    border-bottom: 0.5px solid #b3b3b3;
+    border-style: dashed;
+    @include for-size(tabletLarge-view) {
+        flex-wrap: nowrap;
+        gap: 16px;
+        border: 0;
+        padding: 0;
+    }
+    .add-employee-btn {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        white-space: nowrap;
+        width: 158px;
+        background-color: $white;
+        border: 1px solid $main-primary;
+        color: $main-primary;
+        @include fontsize(14px);
+        border-radius: 25px;
+        font-weight: 600;
+        line-height: 20px;
+        padding: 10px;
+        .add-icon {
+            display: block;
+            width: 20px;
+            height: 20px;
+            background: url("../../assets/images/add-icon.svg");
+        }
+        @include for-size(tabletLarge-view) {
+            padding: 12px;
+            width: 176px;
+        }
+    }
+    .import-export-btn {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        width: 100px;
+        background-color: $main-primary;
+        border: 1px solid $main-primary;
+        color: $white;
+        @include fontsize(14px);
+        border-radius: 25px;
+        font-weight: 600;
+        line-height: 20px;
+        padding: 10px;
+        .import-icon {
+            display: block;
+            width: 20px;
+            height: 15px;
+            background: url("../../assets/images/import-arrow.svg");
+        }
+        .import-icon.export-icon {
+            transform: rotate(-180deg);
+        }
+        @include for-size(tabletLarge-view) {
+            width: 112px;
+            padding: 12px;
+        }
+    }
+}

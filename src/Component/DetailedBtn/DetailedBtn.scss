@@ -1,0 +1,28 @@
+
+
+.download-icon{
+    display: block;
+    width: 15px;
+    height: 20px;
+    background: url('../../assets/images/download-icon.svg');
+}
+.btn-details{
+    border-radius: 50px;
+    border: 1px solid #FFFFFF;
+    @include fontsize(16px);
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0em;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: #240151;
+    width: 100%;
+    gap: 12px;
+    padding: 12px;
+    @include for-size(tablet-view) {
+        font-size: 16px;
+    }
+}

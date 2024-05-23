@@ -1,0 +1,116 @@
+@import "../../assets/css/global.scss";
+
+.basic-info {
+    margin-bottom: 24px;
+    padding-bottom: 23px;
+    border-bottom: 1px solid #eaeaea;
+    @include for-size(tabletLarge-view) {
+        margin: 0;
+        margin-bottom: 16px;
+        border: 1px solid $border-color-2;
+        border-radius: 10px;
+        padding: 0;
+    }
+    @include for-size(laptop-view-new) {
+        margin: 0;
+
+        width: 70.5%;
+    }
+    h2 {
+        color: $text-black;
+        margin-bottom: 16px;
+        font-weight: 700;
+
+        @include for-size(tabletLarge-view) {
+            font-weight: 600;
+            padding: 20px 25px;
+            background-color: rgba(249, 247, 254, 1);
+            border-radius: 10px 10px 0px 0px;
+            margin: 0;
+        }
+    }
+}
+
+.plan-wrap {
+    padding: 7px 7px 3px;
+    border: 1px solid $border-color-2;
+    border-radius: 16px;
+    background-color: rgba(249, 247, 254, 1);
+
+    @include for-size(tabletLarge-view) {
+        display: flex;
+        justify-content: space-between;
+        padding: 30px 25px;
+        border: 0;
+        border-radius: 0px 0px 16px 16px;
+        background-color: $white;
+    }
+    @include for-size(laptop-view-new) {
+        padding: 24px 23px;
+    }
+}
+
+.plan-info {
+    &:not(:last-child) .plan-secondary {
+        border-bottom: 1px solid rgba(234, 234, 234, 1);
+        margin-bottom: 10px;
+
+        @include for-size(tabletLarge-view) {
+            border: 0;
+        }
+    }
+
+    .plan-primary {
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid rgba(234, 234, 234, 1);
+
+        @include for-size(tabletLarge-view) {
+            margin-bottom: 25px;
+            border: 0;
+            flex-direction: column;
+        }
+    }
+
+    .plan-secondary {
+        display: flex;
+        justify-content: space-between;
+
+        @include for-size(tabletLarge-view) {
+            flex-direction: column;
+        }
+    }
+
+    h3 {
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 18px;
+        letter-spacing: 0.10000000149011612px;
+        margin-bottom: 5px;
+
+        @include for-size(tabletLarge-view) {
+            font-weight: 600;
+        }
+        @include for-size(laptop-view-new) {
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 17.07px;
+        }
+    }
+
+    .sub-head {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 18px;
+        letter-spacing: 0.10000000149011612px;
+        @include for-size(tabletLarge-view) {
+            font-weight: 400;
+        }
+        @include for-size(laptop-view-new) {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 19.5px;
+        }
+    }
+}

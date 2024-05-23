@@ -1,0 +1,33 @@
+
+.profile-wrap {
+    margin-bottom: 25px;
+    border-bottom: 2px solid #EAEAEA;
+    padding-bottom: 11px;
+}
+.main-profile{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom:12px;
+}
+.profile-img{
+    display: block;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 44px;
+    height: 44px;
+    flex: none;
+}
+.profile-name{
+    font-size: 12px;
+    font-weight: 600;
+    color: $text-black;
+    display: flex;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    span{
+        width: 100%;
+    }
+}

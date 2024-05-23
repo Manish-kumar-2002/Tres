@@ -1,0 +1,50 @@
+@import '../../assets/css/variable.scss';
+@import '../../assets/css/mixin.scss';
+.progress-bar-wrap{
+    display: none;
+    @include for-size(tablet-view) {
+        display: block;
+        margin-bottom: 10px;
+    }
+    @include for-size(tabletLarge-view){
+        margin-bottom: 16px;
+    }
+    .steps-wrap{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        @include for-size(laptop-view-new){
+            margin-bottom: 3px;
+        }
+        .steps-block{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            @include for-size(laptop-view-new){
+                gap: 80px;
+            }
+            .steps-show{
+                @include fontsize(16px);
+                font-weight: 600;
+                color: #9F9F9F;
+                &.active{
+                    color: #540BE0;
+                }
+            }
+        }
+       
+    }
+    .steps-count{
+        @include fontsize(16px);
+        font-weight: 400;
+        color: $text-black;
+    }
+    .progress, .progress-stacked{
+        height: 2px;
+        .progress-bar{
+            background: #540BE0;
+        }
+    }
+    
+}

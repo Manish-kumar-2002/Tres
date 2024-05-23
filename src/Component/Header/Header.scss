@@ -1,0 +1,139 @@
+.header {
+    padding: 13px 0;
+    position: absolute;
+    width: 100%;
+    @include for-size(tablet-view) {
+        background: #240151;
+        position: relative;
+    }
+    @include for-size(tabletLarge-view) {
+        padding: 28px 0 25px;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include for-size(tabletLarge-view) {
+            padding: 0 24px;
+        }
+    }
+    .logo {
+        width: 118px;
+        @include for-size(tabletLarge-view) {
+            width: auto;
+        }
+    }
+    .logo,
+    .help-btn {
+        display: block;
+    }
+    .help-btn {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        width: 75px;
+        font-size: 14px;
+        border-radius: 50px;
+        border: 0.1rem solid $white;
+        color: $white;
+        padding: 6px 0;
+        gap: 4px;
+        font-weight: 600;
+        @include for-size(tablet-view) {
+            display: flex;
+            width: 95px;
+            padding: 10px 0;
+        }
+        .qustion-icon {
+            display: block;
+            width: 18px;
+            height: 18px;
+            background: url("../../assets/images/question-icon.png");
+            background-size: 18px;
+            @include for-size(tablet-view) {
+                width: 25px;
+                height: 24px;
+                background-size: 25px;
+            }
+        }
+    }
+
+    .hamburger {
+        border: 0;
+        background-color: transparent;
+        transition: all 0.5s;
+        .bar {
+            background-color: $white;
+            height: 3px;
+            width: 23px;
+            margin-bottom: 3px;
+            display: block;
+            transition: all 0.5s;
+        }
+        &.active-class {
+            .middle-bar {
+                opacity: 0;
+            }
+            :nth-child(1) {
+                transform: translateY(1px) rotate(45deg);
+            }
+            :nth-child(3) {
+                transform: translateY(-11px) rotate(-45deg);
+            }
+        }
+        @include for-size(tablet-view) {
+            display: none;
+        }
+    }
+    .mobile-sidebar {
+        left: -100%;
+        top: 100%;
+        position: absolute;
+        transition: all 0.5s;
+    }
+    .show-sidebar.mobile-sidebar {
+        left: 0;
+        transition: all 0.5s;
+    }
+    .show-sidebar .sidebar {
+        display: block;
+        border-radius: 0;
+    }
+    @include for-size(tablet-view) {
+        .mobile-sidebar {
+            display: none !important;
+        }
+    }
+
+    .profile-mob-wrap {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        @include for-size(tablet-view) {
+            display: none;
+        }
+        .profile-show {
+            border: 1px solid $white;
+            border-radius: 50%;
+            .profile-icon {
+                display: block;
+                background: url("../../assets/images/profile.png") no-repeat;
+                border-radius: 50%;
+                width: 28px;
+                height: 28px;
+                background-size: cover;
+            }
+        }
+        .notification-btn {
+            display: block;
+            .notification-icon {
+                display: block;
+                width: 22px;
+                height: 24px;
+                background: url("../../assets/images/white-notification.svg")
+                    no-repeat;
+            }
+        }
+    }
+}

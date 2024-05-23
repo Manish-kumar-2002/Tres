@@ -1,0 +1,100 @@
+@import "../../assets/css/variable.scss";
+@import "../../assets/css/mixin.scss";
+.manage-employee-block {
+    width: 100%;
+    // margin-top: 56px;
+    @include for-size(tablet-view) {
+        width: calc(100% - 284px);
+        margin-top: 0px;
+    }
+
+    .main-card {
+        padding-top: 20px;
+        .search-block {
+            padding-bottom: 16px;
+            border-bottom: 0.5px solid #b3b3b3;
+            border-style: dashed;
+            @include for-size(tabletLarge-view) {
+                border: none;
+                padding: 0;
+            }
+            .Search-icon {
+                display: block;
+                width: 28px;
+                height: 29px;
+                background: url("../../assets/images/search-icon.svg") no-repeat;
+                position: absolute;
+                top: 40%;
+                right: 10px;
+                transform: translateY(-50%);
+                @include for-size(tabletLarge-view) {
+                    top: 48%;
+                }
+            }
+        }
+    }
+    .table-wrap {
+        padding-left: 20px;
+        @include for-size(tablet-view) {
+            padding-left: 0px;
+        }
+        tbody {
+            tr {
+                td {
+                    min-height: 104px;
+                    height: 104px;
+                }
+            }
+        }
+    }
+}
+.searchbar-wrap {
+    & > div {
+        margin-bottom: 24px;
+        padding: 0 20px;
+        @include for-size(tablet-view) {
+            padding: 0;
+        }
+        @include for-size(tabletLarge-view) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            margin-bottom: 39px;
+        }
+    }
+}
+
+.add-filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    padding: 0 20px;
+    @include for-size(tabletLarge-view) {
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 8px;
+        justify-content: space-between;
+        margin-bottom: 24px;
+        padding: 0;
+    }
+    .filter-popup-btn {
+        @include for-size(tabletLarge-view) {
+            display: none;
+        }
+        .filter-btn {
+            font-size: 12px;
+            font-weight: 600;
+            text-align: left;
+            border: none;
+            background: transparent;
+            color: #540be0;
+            text-decoration: underline;
+        }
+    }
+    .filter-btn-wrap {
+        @include for-size(tabletLarge-view) {
+            display: none;
+        }
+    }
+}
